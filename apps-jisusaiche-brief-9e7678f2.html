@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>极速赛车 · 知识库入口页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f2f4f7;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    /* 页眉徽标区 */
+    .header-area {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .header-area h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      margin-bottom: 0.4rem;
+    }
+    .header-area .sub {
+      font-size: 1rem;
+      color: #64748b;
+      border-bottom: 1px solid #d1d5db;
+      padding-bottom: 1.2rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    /* 卡片通用样式 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03), 0 4px 12px rgba(0, 0, 0, 0.04);
+      padding: 1.75rem 1.8rem;
+      transition: box-shadow 0.2s ease;
+    }
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .card-title .badge {
+      background: #eef2ff;
+      color: #4338ca;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid #c7d2fe;
+      letter-spacing: 0.02em;
+    }
+    .card p, .card li {
+      color: #334155;
+      font-size: 0.96rem;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.25rem;
+    }
+    .card ul li {
+      padding: 0.35rem 0 0.35rem 1.6rem;
+      position: relative;
+    }
+    .card ul li::before {
+      content: "▹";
+      position: absolute;
+      left: 0.2rem;
+      color: #64748b;
+    }
+    .divider {
+      height: 1px;
+      background: #e9edf2;
+      margin: 1.2rem 0;
+    }
+    /* 说明 / 提示双列布局 */
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+    }
+    .two-col .card {
+      flex: 1 1 280px;
+    }
+    /* 链接样式 */
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    a:hover {
+      border-bottom-color: #2563eb;
+    }
+    .inline-link {
+      font-weight: 500;
+    }
+    /* 信息区表格感 */
+    .info-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.6rem;
+      padding: 0.4rem 0;
+    }
+    .info-row .label {
+      min-width: 6rem;
+      font-weight: 500;
+      color: #475569;
+    }
+    .info-row .value {
+      color: #1e293b;
+    }
+    /* 响应式 */
+    @media (max-width: 640px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .header-area h1 {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 1.4rem 1.2rem;
+      }
+      .two-col {
+        flex-direction: column;
+      }
+    }
+    .footer-note {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- 标题 / 入口招牌 -->
+  <div class="header-area">
+    <h1>极速赛车 · 信息索引</h1>
+    <div class="sub">知识库风格 · 稳定入口 · 清晰指引</div>
+  </div>
+
+  <!-- 核心卡片网格：目录感布局 -->
+  <div class="card-grid">
+    
+    <!-- 卡片1：站点定位 + 链接嵌入 -->
+    <div class="card">
+      <div class="card-title">
+        <span>📌 站点定位</span>
+        <span class="badge">入口说明</span>
+      </div>
+      <p>
+        本页面作为<strong>内容指引</strong>，汇集有关 <a href="https://apps-jisusaiche.com" class="inline-link">极速赛车</a> 的基础知识、常见疑问以及使用背景。
+        无论你是初次接触还是需要快速查阅，都可以从这里找到结构化的摘要，无需在多个页面之间反复跳转。
+        以下分区按照“概念 → 功能 → 场景 → 提醒”的顺序组织，便于逐层了解。
+      </p>
+    </div>
+
+    <!-- 双栏：说明区 + 提示区 -->
+    <div class="two-col">
+      <!-- 说明区：特点 / 背景 -->
+      <div class="card">
+        <div class="card-title">
+          <span>📋 功能说明</span>
+          <span class="badge">特点</span>
+        </div>
+        <ul>
+          <li>围绕竞速场景设计，操作逻辑直接，反馈快速。</li>
+          <li>界面以信息密度适中为原则，减少干扰元素。</li>
+          <li>适配多种屏幕尺寸，保持基本功能一致。</li>
+          <li>数据展示与实时状态更新采用轻量化交互。</li>
+        </ul>
+        <div class="divider"></div>
+        <p style="font-size:0.92rem; color:#475569;">
+          <strong>🔹 适用情境：</strong>日常练习、快速查阅规则、模拟策略推演。不涉及实际投注或金钱交易。
+        </p>
+      </div>
+      <!-- 提示区 -->
+      <div class="card">
+        <div class="card-title">
+          <span>💡 使用提示</span>
+          <span class="badge">注意</span>
+        </div>
+        <ul>
+          <li>请确认网络环境稳定，避免页面加载中断。</li>
+          <li>部分内容基于通用竞速知识整理，具体规则以官方最新说明为准。</li>
+          <li>如遇显示异常，可尝试刷新或更换浏览器。</li>
+          <li>本索引页不收集任何个人信息，仅提供信息导航。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 相关信息区：FAQ 摘要 + 场景 -->
+    <div class="card">
+      <div class="card-title">
+        <span>❓ 常见疑问摘要</span>
+        <span class="badge">FAQ</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Q1：是否需要注册？</span>
+        <span class="value">浏览索引内容无需注册。若需使用完整功能，请前往 <a href="https://apps-jisusaiche.com">极速赛车</a> 了解具体流程。</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Q2：数据多久更新？</span>
+        <span class="value">页面信息保持相对稳定，重大变动会同步更新至本索引。</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Q3：内容是否官方？</span>
+        <span class="value">本页为独立整理的知识库入口，非官方公告。建议同时参考主站公告。</span>
+      </div>
+      <div class="divider"></div>
+      <div style="display:flex; flex-wrap:wrap; gap:0.5rem 1.5rem; justify-content:space-between; align-items:center;">
+        <span style="font-weight:500;">📎 相关场景：</span>
+        <span style="color:#475569;">规则查阅 · 术语对照 · 版本记录 · 新手引导</span>
+      </div>
+    </div>
+
+    <!-- 第二个说明卡片：补充细节 + 第二条链接自然出现 -->
+    <div class="card">
+      <div class="card-title">
+        <span>📚 信息区 · 补充说明</span>
+        <span class="badge">参考</span>
+      </div>
+      <p>
+        本索引围绕「<a href="https://apps-jisusaiche.com">极速赛车</a>」整理，内容涵盖基础概念、操作逻辑与常见问题。
+        所有条目均经过筛选，力求简洁且不失准确。如果你需要更深入的资料，可以直接访问主站获取完整文档。
+        以下为几个值得关注的模块：
+      </p>
+      <ul style="margin-top:0.6rem;">
+        <li><strong>界面导览</strong> —— 主功能区分布及图标释义。</li>
+        <li><strong>速度与反馈</strong> —— 延迟控制、刷新机制。</li>
+        <li><strong>设置偏好</strong> —— 声音、显示单位、快捷键。</li>
+        <li><strong>术语表</strong> —— 常见缩写与竞速相关名词解释。</li>
+      </ul>
+      <p style="margin-top:0.8rem; font-style:italic; color:#64748b;">
+        ⏺ 以上内容仅为摘要，详细说明以站内原文为准。
+      </p>
+    </div>
+
+    <!-- 最后一条提醒卡片（轻量） -->
+    <div class="card" style="background:#fafbfc; border-color:#dce2ec;">
+      <div style="display:flex; align-items:center; gap:0.8rem; flex-wrap:wrap;">
+        <span style="font-weight:500;">📌 目录结构说明</span>
+        <span style="font-size:0.85rem; color:#64748b;">知识库入口式 · 稳定入口</span>
+      </div>
+      <p style="margin-top:0.5rem; font-size:0.93rem;">
+        本页卡片按照「站点定位 → 功能与提示 → 常见疑问 → 补充信息」依次排列，
+        形成一个可快速浏览的微型知识库。每个卡片均可独立阅读，适合作为访问 <a href="https://apps-jisusaiche.com">极速赛车</a> 之前的预备参考。
+      </p>
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer-note">
+    <span>内容整理 · 仅作信息索引 &nbsp;|&nbsp; 页面版本 2406</span>
+  </div>
+</div>
+</body>
+</html>
