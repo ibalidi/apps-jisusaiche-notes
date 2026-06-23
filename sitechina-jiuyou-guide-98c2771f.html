@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九游娱乐 · 简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: #f5f3f0;
+            color: #1e1e1e;
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f0f13 0%, #1b1b26 50%, #0e0d14 100%);
+            padding: 100px 24px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -20%;
+            width: 60%;
+            height: 180%;
+            background: radial-gradient(circle at 30% 40%, rgba(245, 200, 100, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #f0ede6;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            margin: 0 auto;
+            color: #b7b3a8;
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+
+        .hero .tag {
+            display: inline-block;
+            margin-top: 28px;
+            background: rgba(255, 215, 120, 0.12);
+            border: 1px solid rgba(255, 215, 120, 0.18);
+            padding: 6px 22px;
+            border-radius: 40px;
+            color: #e2d3b0;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 60px 24px 40px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #8a867c;
+            border-left: 3px solid #d4b57a;
+            padding-left: 10px;
+            margin-bottom: 24px;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 56px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 32px 28px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 8px 24px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            color: #25221c;
+            letter-spacing: -0.3px;
+        }
+
+        .card p {
+            font-size: 0.96rem;
+            color: #3c3a36;
+        }
+
+        .card .icon-emoji {
+            font-size: 1.6rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .full-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 38px 36px;
+            margin-bottom: 50px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 10px 28px rgba(0, 0, 0, 0.04);
+        }
+
+        .full-card h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #1f1c17;
+        }
+
+        .full-card p {
+            font-size: 0.98rem;
+            color: #3b3832;
+            margin-bottom: 16px;
+        }
+
+        .full-card a {
+            color: #a77b38;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s;
+        }
+
+        .full-card a:hover {
+            border-bottom-color: #a77b38;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px 40px;
+            margin: 24px 0 16px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e6e2da;
+            padding-bottom: 12px;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1f1c17;
+            margin-bottom: 4px;
+        }
+
+        .faq-item .a {
+            font-size: 0.9rem;
+            color: #5b5750;
+        }
+
+        .footnote {
+            text-align: center;
+            margin-top: 50px;
+            padding: 36px 20px 50px;
+            border-top: 1px solid #dcd6cc;
+            color: #6e6a62;
+            font-size: 0.9rem;
+        }
+
+        .footnote a {
+            color: #8b6f3e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+        }
+
+        .footnote a:hover {
+            border-bottom-color: #8b6f3e;
+        }
+
+        .footnote .small-meta {
+            display: block;
+            margin-top: 14px;
+            font-size: 0.75rem;
+            color: #9b968b;
+        }
+
+        @media (max-width: 740px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-card {
+                padding: 28px 20px;
+            }
+
+            .container {
+                padding: 40px 16px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>九游娱乐 · 简明指南</h1>
+    <p>从基础认知到顺畅访问，一份面向日常用户的轻量手册。<br>聚焦平台背景与使用提醒，不做过度承诺。</p>
+    <span class="tag">杂志专题 · 访问提示</span>
+</section>
+
+<div class="container">
+
+    <!-- 背景说明 + 平台特点 -->
+    <div class="two-column">
+        <div class="card">
+            <span class="icon-emoji">🧭</span>
+            <h3>平台背景速览</h3>
+            <p><strong>九游娱乐</strong> 定位于综合性数字互动内容平台，聚合多种线上休闲场景。其服务基于稳定技术架构，面向多终端用户开放。平台内容涵盖游戏、社交及轻量互动模块，持续迭代功能界面。用户可通过官网直接了解最新服务动态与版本信息。</p>
+        </div>
+        <div class="card">
+            <span class="icon-emoji">⚙️</span>
+            <h3>服务特点与边界</h3>
+            <p>平台采用分层内容推荐机制，注册用户可自定义偏好。所有线上交互均需遵守用户协议与当地法规。九游娱乐不保证任何收益或结果，仅作为渠道提供方。使用前建议阅读服务条款，理性参与各类娱乐内容。</p>
+        </div>
+    </div>
+
+    <!-- 三段自然介绍 —— 从访问提醒角度展开 -->
+    <div class="full-card">
+        <h2>▎访问前须知</h2>
+        <p>建议通过官方域名直接访问 <a href="https://sitechina-jiuyou.com">九游娱乐</a>，以获取最新的服务列表与区域适配信息。第三方镜像或非官方链接可能存在数据风险，请优先使用主域。平台首页提供清晰的导航入口，无需额外下载即可浏览基础内容。</p>
+        <p>若遇到加载异常或页面提示，可先检查本地网络环境。部分功能依赖浏览器特性（WebGL、WebSocket），建议保持浏览器为最新版本。九游娱乐不通过主动弹窗索取敏感信息，任何要求提供支付密码或验证码的外部页面均须警惕。</p>
+    </div>
+
+    <div class="full-card" style="margin-bottom: 24px;">
+        <h2>▎日常使用场景</h2>
+        <p>许多用户将 <strong>九游娱乐</strong> 作为碎片化时间的轻量选择：参与限时活动、浏览话题广场、或与好友组队完成协作任务。平台内设内容分类与智能排序，方便快速筛选。官方也会定期更新版本说明与活动日历，帮助用户规划参与节奏。</p>
+        <p>需要留意的是，任何线上娱乐都应适度。建议设置单次时长提醒，并留意账户的登录设备记录。九游娱乐后台提供近期登录明细，用户可随时检查异常。若发现非本人操作，可通过客服通道申请临时冻结。</p>
+    </div>
+
+    <!-- FAQ 摘要 —— 简短高频问题 -->
+    <div class="full-card">
+        <h2>▎常见疑问摘要</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="q">注册是否需要手机号？</div>
+                <div class="a">目前支持邮箱及手机号两种方式，根据地区略有不同。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">内容是否对全年龄段开放？</div>
+                <div class="a">部分互动场景设有年龄门槛，具体以页面标注为准。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">忘记密码如何处理？</div>
+                <div class="a">通过登录页“找回”功能，按指引验证身份即可重置。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">能否跨设备同步数据？</div>
+                <div class="a">绑定同一账户后，大部分进度与记录支持云同步。</div>
+            </div>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: #5b5750;">更多细节可访问官网帮助中心，或直接参考 <a href="https://sitechina-jiuyou.com">九游娱乐</a> 内的指引页面。</p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footnote">
+        <p><strong>访问提醒</strong> · 本页仅为信息介绍，不构成任何形式的活动推荐或邀约。请通过 <a href="https://sitechina-jiuyou.com">九游娱乐</a> 官方渠道获取最新公告。理性参与，注意个人信息保护。</p>
+        <span class="small-meta">版本参考 · 内容方向：杂志专题 / 简明指南 & 访问提醒</span>
+    </div>
+
+</div>
+
+</body>
+</html>
